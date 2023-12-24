@@ -1,0 +1,135 @@
+<section id="" class="container-fluid w-100 d-flex align-items-center justify-content-center bg-light">
+    <div id="homepage_cont" class="row p-0 m-0 d-flex align-items-center justify-content-center flex-row w-100 container" >
+      <div id="" class="d-flex align-items-center justify-content-center flex-column rounded p-3 m-2 w-100" style="">
+        
+        <form action="/post_job" method="post" class="w-100 border border-dark px-4 py-3 my-auto justify-content-center align-items-center" style="border-radius: 10px; color: rgb(8, 8, 8);">
+
+          <h3 class="text-center">Job Application Form</h3>
+          <hr class="border border-dark">
+      
+          <div class="row mb-4">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="job_title">Select Job Category</label>
+                      <br>
+                      <select class="form-select w-100 p-2 mt-2 rounded" aria-label="Default select example" id="job_title" name="job_title">
+                          <option value="Tech" selected>Tech</option>
+                          <option value="Non-Tech">Non-Tech</option>
+                          <option value="HR">HR</option>
+                      </select>
+                  </div>
+              </div>
+      
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="job_desc">Select Job Designation</label>
+                      <br>
+                      <select class="form-select w-100 p-2 mt-2 rounded" aria-label="Default select example" id="job_desc" name="job_desc">
+                          <!-- Options here -->
+                          <option value="SDE" selected>SDE</option>
+                          <option value="Java_Developer">Java Developer</option>
+                          <option value="Front_End_Devloper">Front-End Devloper</option>
+                          <option value="Back_End_Devloper">Back-End Devloper</option>
+                          <option value="Full_Stack_Devloper">Full-Stack Devloper</option>
+                          <option value="System_Designer">System-Designer</option>
+                          <option value="Mern_Developer">MERN Developer</option>
+                          <option value="Mean_Developer">MEAN Developer</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="row mb-4">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="job_location">Enter Job Location</label>
+                      <br>
+                      <input type="text" class="form-control rounded" id="job_location" name="job_location" value="Noida">
+                  </div>
+              </div>
+      
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="company_name">Company Name</label>
+
+                      <br>
+                      <input type="text" class="form-control rounded" value="ABC.LTD" name="company_name" id="company_name">
+                  </div>
+              </div>
+          </div>
+          
+          <div class="row mb-4">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="skills_required">Description</label>
+                      <br>
+                      <textarea name="" id="" cols="30" rows="4" placeholder="We are looking for a talented technical writer to help create and build out a modern documentation and user assistance infrastructure"></textarea>
+                      <!-- <select class="select w-100  rounded container py-2 px-2" name="skills_required " multiple>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="Node" >Node</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="React">React</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="Express">Express</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="Mongodb">MongoDB</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="Java">Java</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="Servlet">Servelet</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="SpringBoot">SpringBoot</option>
+                          <option class="btn-sm btn-outline-dark  my-1 border w-100" value="MySql">MySql</option>
+                      </select> -->
+                  </div>
+                
+              </div>
+  
+  
+      
+                <div class="col-md-6">
+  
+                    <label for="skills_required">Skill's Required</label>
+                    <br>
+                    <textarea name="" id="" cols="30" rows="4" placeholder="Java,SpringBoot,Maven etc ..."></textarea>
+                      
+              </div>
+          </div>
+          <div class="row mb-4">
+              <div class="col-md-6">
+                 
+                <div class="form-group col-12">
+                    <label for="salary" class="">Annual Package:</label>
+                    <br>
+                    <input type="number" class="form-control rounded" id="salary" name="salary" value="4">
+                </div>    
+                
+              </div>
+              <div class="col-md-6">
+                      <div class="form-group col-12">
+                          <label for="job_openings">Open Position</label>
+                          <br>
+                          <input type="number" class="form-control rounded" id="job_openings" name="job_openings" value="4">
+                      </div>  
+              </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-6">
+               
+              <div class="form-group col-12">
+                  <label for="salary" class="">Company Website Url </label>
+                  <br>
+                  <input type="text" class="form-control rounded" id="salary" name="salary" value="4">
+              </div>    
+              
+            </div>
+            <div class="col-md-6">
+                    <div class="form-group col-12">
+                        <label for="job_openings">Company Logo Url</label>
+                        <br>
+                        <input type="text" class="form-control rounded" id="job_openings" name="job_openings" value="4">
+                    </div>  
+            </div>
+        </div>
+          <button type="submit" class="btn btn-primary w-100" style="color: rgb(7, 7, 7);">Submit</button>
+          <br>
+      
+      </form>
+      
+      </div>
+    </div>
+  </section>
+   

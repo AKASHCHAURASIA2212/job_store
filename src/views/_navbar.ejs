@@ -1,0 +1,119 @@
+<style>
+
+  .user-avatar {
+    /* margin: 0 0 1rem 0; */
+}
+
+  .user-avatar img {
+    width: 45px;
+    height: 45px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+</style>
+
+<nav class="container-fluid d-flex flex-row justify-content-between align-items-center w-100 p-2 px-sm-3" style="background: #000;">
+
+    <div class="w-100 d-flex flex-row align-content-center justify-content-between">
+      <a href="#"> <img src="/img/job_logo.jpg" role="img" alt="logo" height="45px" class="rounded rounded-circle"></a>
+
+      <div class="text-light">
+        <%if(locals.username){ %>
+    
+          <ul class="d-sm-flex flex-row align-content-center justify-content-center w-100 h-100 list-unstyled d-none pt-2">
+               <li class="px-4">  <a class="" href="/"><span ><b>Home</b></span></a>
+               </li>
+              <li class="px-4"><a class="" href="/jobs">
+                 <span><b>Jobs</b></span>
+                </a></li>
+              <li class="px-4"><a class="" href="/view-apply-jobs">
+                 <span ><b>Applied</b></span>
+                </a></li>
+              <li class="px-4"><a class="" href="/post_job"><span><b>Post</b></span>
+                 </a></li> 
+              <li class="px-4"><a class="" href="/post_job_by_id"><span ><b>Posted</b></span>
+              </a></li> 
+          </ul>
+          <% } %>
+    
+      </div>
+    </div>
+    
+    <div class="text-responsive">
+
+      <div class="dropdown">
+
+        <div class="user-avatar dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+      </div>
+        <!-- <button class="btn btn-secondary " >
+          Dropdown
+        </button> -->
+          <ul class="dropdown-menu  w-100 border border-dark" style="width: 280px;">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-responsive text-light bg-light rounded-3 py-4 w-100 !important">
+
+              <div class="row d-flex flex-column justify-content-center align-items-center w-100 mb-2">
+                <div class="container border d-flex align-items-center justify-content-center w-auto rounded-5 border border-black">
+                  <img src="https://bootdey.com/img/Content/avatar/avatar7.png" role="img" alt="userlogo" height="45px"  width="45px" >
+                </div>
+                <h5 class="text-center mt-2 text-responsive text-dark" style="font-size: 12px;"><i>USERNAME</i></h5>
+              </div>
+              <!-- <hr class="border border-dark m-0"> -->
+              <div class="row w-100 m-0 p-0">
+                <ul class="list-unstyled p-0 m-0 w-100 text-bg-light" >
+                    <%if(locals.username){ %>
+             
+                  <li class="list-style w-100 my-1"><a class="btn btn-outline-dark w-100" href="/" style="font-size: 12px;">Home</a></li>
+                  <li class="list-style my-1"><a class="btn btn-outline-dark w-100" href="/profile" style="font-size: 12px;">Manage Account</a></li>
+                  
+                  <li class="list-style my-1"><a class="btn btn-outline-dark w-100" href="/logout" style="font-size: 12px;">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                  <% }else{ %>
+        
+                    <li class="list-style my-1"><a class="btn btn-outline-dark  w-100" href="/login" style="font-size: 12px;">Login <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                    <li class="list-style my-1"><a class="btn btn-outline-dark  w-100" href="/register" style="font-size: 12px;">Register <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                  <% } %>
+        
+                </ul>
+              </div>
+            </div>
+            
+          </ul>
+      </div>
+       
+        <!-- <div class="dropdown w-100" style="max-width: 500px;">
+          <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/user_logo.jpg" role="img" alt="userlogo" height="45px" width="45px" class="border border-danger" style="border-radius: 50%;">
+          </a> -->
+        
+          <!-- <ul class="dropdown-menu  w-100 border border-dark">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-responsive text-light bg-light rounded-3 py-4" style="width: 280px;">
+
+              <div class="row d-flex flex-column justify-content-center align-items-center w-100 mb-2">
+                <div class="container border d-flex align-items-center justify-content-center w-auto rounded-5 border border-black">
+                  <img src="./public/img/user_logo_1.png" role="img" alt="userlogo" height="45px"  width="45px" >
+                </div>
+                <h5 class="text-center mt-2 text-responsive text-dark" style="font-size: 12px;"><i>USERNAME</i></h5>
+              </div>
+              <div class="row w-100 m-0 p-0">
+                <ul class="list-unstyled p-0 m-0 w-100 text-bg-light" >
+                    <%if(locals.username){ %>
+             
+                  <li class="list-style w-100 my-1"><a class="btn btn-outline-dark w-100" href="/" style="font-size: 12px;">Home</a></li>
+                  <li class="list-style my-1"><a class="btn btn-outline-dark w-100" href="/profile" style="font-size: 12px;">Manage Account</a></li>
+                  
+                  <li class="list-style my-1"><a class="btn btn-outline-dark w-100" href="/logout" style="font-size: 12px;">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                  <% }else{ %>
+        
+                    <li class="list-style my-1"><a class="btn btn-outline-dark  w-100" href="/login" style="font-size: 12px;">Login <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                    <li class="list-style my-1"><a class="btn btn-outline-dark  w-100" href="/register" style="font-size: 12px;">Register <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                  <% } %>
+        
+                </ul>
+              </div>
+            </div>
+            
+          </ul> -->
+        </div>
+    </div>
+</nav>

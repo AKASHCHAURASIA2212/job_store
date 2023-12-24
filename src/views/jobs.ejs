@@ -1,0 +1,27 @@
+<div class="container d-flex flex-wrap justify-content-around ">
+
+    <% locals.jobs.forEach((obj)=>{ %>
+
+        <div class="card text-info border-primary mb-3"  style="max-width: 18rem;">
+            <div class="card-header mb-2">
+                <h4><%=obj.company_name%></h4>
+            <div class="card-body">
+            <h5 class="card-title mb-2"><%=obj.job_title%></h5>
+            <h5 class="card-title mb-2"><%=obj.job_desc%></h5>
+            <h6 class="card-title mb-2"><%=obj.job_location%></h6>
+            <h6 class="card-title mb-2"><%=obj.salary%></h6>
+            <p class="card-text mb-2">
+                <%obj.skills_required.forEach((skill_obj)=>{ %>
+                    <a href="#" class="btn btn-outline-success btn-sm disabled m-1" tabindex="-1" role="button" aria-disabled="true"><%=skill_obj%></a>
+                <%  }) %>
+               
+            </p>
+            </div>
+            <a href="/jobs/<%=obj.job_id%>" class="btn btn-outline-danger p-1 w-100">View Details</a>
+     </div>
+
+</div>
+
+    
+<%  })  %>
+

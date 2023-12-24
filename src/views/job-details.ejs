@@ -1,0 +1,148 @@
+<div class="w-100 h-100 mb-0 bg-light">
+    <div class="container my-5 py-3">
+
+        <%let obj_data = locals.obj_data %>
+      <!-- job details new box modal start -->
+
+      
+     <div class="container d-flex my-5 justify-content-center align-items-center">
+        <div class="container-fluid border border-dark rounded-2 px-4 py-3 text-responsive" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;background-color: rgb(252, 248, 248);color: rgb(4, 4, 4);" >
+            <h2 class="text-capitalize my-2 text-primary"><%=obj_data.job_title%> Expert At <%=obj_data.company_name%></h2>
+            <hr class="border border-dark">
+            <p class="text-dark h4-responsive"><%=obj_data.job_desc%>
+            </p>
+            <hr class="border border-dark">
+            <h4 class="h4-responsive"><span>Company : <%=obj_data.company_name%></span></h4>
+            <h4 class="h4-responsive"><span>Tech Stack : <%=obj_data.skills_required%></span></h4>
+            <h4 class="h4-responsive"><span>Location : <%=obj_data.job_location%></span></h4>
+            <h4 class="h4-responsive"><span>Salary : <%=obj_data.salary%> LPA</span></43>
+            
+            <h4 class="h4-responsive"><span>Opennings : <%=obj_data.job_openings%></span></h4>
+            
+            <h4 class="h4-responsive"><span>Posted : <%=obj_data.date_entered%></span></h4>
+            <hr class="border border-dark">
+          <button type="button" class="btn btn-success btn-sm h4-responsive" data-toggle="modal" data-target="#applyjobmodal">
+            Apply Now
+          </button>
+        
+        
+          <a class="btn btn btn-outline-danger btn-sm h4-responsive" href="/jobs/<%=obj_data.job_id%>/update" role="button" data-toggle="modal" data-target="#deleteJobModal"><i class="fa-solid fa-trash"></i></a>
+        
+          <a class="btn btn btn-outline-primary btn-sm h4-responsive" href="/jobs/<%=obj_data.job_id%>/delete" role="button" data-toggle="modal" data-target="#updatejobmodal"><i class="fa-solid fa-pen-to-square"></i></a>
+       </div>    
+    </div> 
+      
+
+      <!-- job details new box modal end -->
+      
+    
+      
+            <!-- Apply Job Modal -->
+            <div class="modal fade" id="applyjobmodal" tabindex="-1" aria-labelledby="applyjobmodalTitle" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">APPLY FORM</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    <div class="modal-body">
+                        <!-- <section id="" class="container w-100 border d-flex align-items-center justify-content-center bg-light"> -->
+                            <div id="homepage_cont" class="row p-0 m-0 d-flex align-items-center justify-content-center  flex-row" >
+                              <div id="" class="container-fluid  align-items-center justify-content-center flex-column border bg-light border-dark py-3 rounded my-3">
+                                <form action="/jobs/<%=obj_data.job_id%>/apply" method="post" enctype="multipart/form-data" id="job_apply" class="text-dark bg-light">
+                                  <div class="mb-3">
+                                      <label for="name" style="">ENTER NAME</label>
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="jon doe">
+                                  </div>
+                                  <div class="mb-3">
+                                  <label for="email" style="">Email address</label>
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                                  </div>
+                                  <div class="mb-3">
+                                      <label for="contact" style="">Contact</label>
+                                      <input type="number" class="form-control" id="contact" name="contact" placeholder="+91 1234567890">
+                                  </div>
+                                  <div class="mb-3">
+                                      <label for="resume" style="">Resume/CV</label>
+                                      <input type="file" class="form-control-file"
+                                    id="file" name="file">
+                                  </div>
+                                  <!-- <hr class="border border-dark"> -->
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger px-2" data-dismiss="modal">Close</button>
+                                      <button type="submit" class="btn btn-primary px-3">Save</button>
+                                  </div>
+                              </form>
+                              
+                              </div>
+                            </div>
+                            
+                          <!-- </section> -->
+                          
+                    </div>
+                      
+                </div>
+                </div>
+            </div>
+    
+             <!-- Update Apply Job Modal -->
+             <div class="modal fade" id="updatejobmodal" tabindex="-1" role="dialog" aria-labelledby="updatejobmodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">UPDATE FORM</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                    <div class="modal-body">
+                        <form action="/jobs/<%=obj_data.job_id%>/update" method="post" enctype="multipart/form-data" id="job_apply">
+                            <div class="mb-3">
+                                <label for="name" style="">ENTER NAME</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="jon doe">
+                            </div>
+                            <div class="mb-3">
+                            <label for="email" style="">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contact" style="">Contact</label>
+                                <input type="number" class="form-control" id="contact" name="contact" placeholder="+91 1234567890">
+                            </div>
+                            <div class="mb-3">
+                                <label for="resume" style="">Resume/CV</label>
+                                <input type="file" class="form-control-file"
+                              id="file" name="file">
+                            </div>
+                            <!-- <hr class="border border-dark"> -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger px-2" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary px-3">Save</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+                </div>
+                </div>
+            </div>
+    
+             <!-- Delete Apply Job Modal -->    
+            <div class="modal fade" id="deleteJobModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">CONFIRMATION BOX</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ARE YOU REALLY WANT TO DELETE THIS JOB
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+    
+</div>

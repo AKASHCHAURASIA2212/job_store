@@ -1,0 +1,23 @@
+<header class="container-fluid w-100 h-100 d-flex align-items-center justify-content-center">
+  <div id="homepage_cont" class="row p-0 m-0 d-flex align-items-center justify-content-center  flex-row w-100 h-100" >
+    <div id="homepage_msg_cont" class="d-flex align-items-center justify-content-center flex-column" style="color: black;">
+      <p class="m-0"><h3>Greetings and welcome to Job Store!</h3></p>
+      <p class="m-0"> <h5>We are delighted to see you as a part of our community. Feel free to discover, interact, and collaborate with us to create something wonderful</h5></p>
+
+      <%if(locals.username){ %>
+  
+      <button class="btn btn-outline-light"><a href="/jobs">Explore</a></button>
+         
+      <% }else {%>
+         <div class="container d-flex justify-content-around align-items-center p-2 w-25">
+               
+            <button class="btn btn-info m-1 px-4"><a href="/login">Login</a></button>
+            <button class="btn btn-info m-1"><a href="/register">Register</a></button>
+                
+         </div>
+      <% } %>
+
+    </div>
+  </div>
+
+</header>

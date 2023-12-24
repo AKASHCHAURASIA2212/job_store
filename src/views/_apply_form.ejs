@@ -1,0 +1,32 @@
+<section id="login_sec" class="container-fluid w-100 border d-flex align-items-center justify-content-center bg-light">
+    <div id="homepage_cont" class="row p-0 m-0 d-flex align-items-center justify-content-center  flex-row" >
+      <div id="login_cont" class="d-flex align-items-center justify-content-center flex-column border border-dark rounded p-3 my-3">
+        <form action="/jobs/<%=obj_data.job_id%>/apply" method="post" enctype="multipart/form-data" id="job_apply" class="text-black">
+          <div class="form-group">
+              <label for="name" style="color: black; font-size: 12px;">ENTER NAME</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="jon doe">
+          </div>
+          <div class="form-group">
+          <label for="email" style="color: black; font-size: 12px;">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+              <label for="contact" style="color: black; font-size: 12px;">Contact</label>
+              <input type="number" class="form-control" id="contact" name="contact" placeholder="+91 1234567890">
+          </div>
+          <div class="form-group">
+              <label for="resume" style="color: black; font-size: 12px;">Resume/CV</label>
+              <input type="file" class="form-control-file"
+            id="file" name="file">
+          </div>
+          <hr class="border border-dark">
+          <div class="modal-footer">
+              <button type="button" class="btn-sm btn-outline-danger px-2" data-dismiss="modal">Close</button>
+              <button onclick="handleFormSubmit" type="submit" class="btn-sm btn-outline-success px-3">Save</button>
+          </div>
+      </form>
+      
+      </div>
+    </div>
+  </section>
+  

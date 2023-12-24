@@ -1,0 +1,27 @@
+<form action="/register" method="post">
+
+    <div class="form-group">
+        <label for="name">Enter Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="akash" placeholder="Enter Name">
+      </div>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" value="demo@gmail2.com" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" value="1234" placeholder="Password">
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="recruiter">
+      <label class="form-check-label" for="recruiter" name="user_role">Login As Applicant</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+
+    <span>already have account login now ? </span><a class="btn btn-sm btn-outline-info" href="/login">login now</a>
+</form>

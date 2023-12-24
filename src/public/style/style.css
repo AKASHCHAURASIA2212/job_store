@@ -1,0 +1,160 @@
+body{
+    width: 100vw;
+    min-height: 100vh;
+  }
+ 
+ body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+        /* Default styles for all screen sizes */
+        .h4-responsive {
+          font-size: 1.4rem; /* Default font size for headings */
+      }
+
+      .h3-responsive {
+              font-size: 1.8rem; /* Adjusted font size for headings on mobile */
+          }
+
+      .text-responsive {
+          font-size: 1.2rem; /* Default font size for paragraphs */
+      }
+
+      body{
+          font-family: 'Mina', sans-serif;
+         
+      }
+
+
+      a{
+          list-style: none;
+          /* background: #000; */
+          color: white;
+      }
+
+    #header_logo{
+        object-fit: contain;
+        object-position: center;
+    }
+
+    #carouselExampleSlidesOnly{
+
+        max-height: 40vh;
+
+    }
+    .carousel-item img{
+        max-height: 200px;
+    }
+
+    #div_img{
+        background-image: url('../img/home_logo.jpg');
+        object-fit: cover;
+        object-position: center;
+    }
+    .dropdown-menu{
+      position: absolute !important;
+      inset: -8px auto auto -72px !important;
+      margin: 14px !important;
+      transform: translate(-40px, 60px) !important;
+      padding: 0 !important;
+      border: 2px solid black;
+    }
+ 
+    .dropdown-toggle::after { 
+            content: none; 
+        } 
+
+    
+    header{
+      width: 100vw;
+      min-height: 90vh;
+      background-image: url('/img/interview_6.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    #login_sec{
+      width: 100vw;
+      min-height: 90vh;
+      background-image: url('/img/login.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #register_sec{
+      width: 100vw;
+      min-height: 90vh;
+      background-image: url('/img/signup_2.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #homepage_cont{
+      /* position: absolute; */
+      /* font-size: 1rem; */
+      /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+      color: white;
+    }
+    
+    .card img{
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+
+    /* .card-body{
+      height: 8rem;
+
+      width: auto;
+      overflow:hidden;
+    } */
+
+    textarea {
+  resize: none;
+  width: 100%;
+  color: rgb(126, 128, 129);
+  border-radius: 5px;
+  padding: 7px;
+}
+
+#contact_form{
+  /* height: 80vh; */
+  height: 100%;
+  width: 100%;
+      /* background-image: url('../img/home_logo.jpg'); */
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+}
+
+#register_sec,#login_sec,#Error{
+  min-height: 90vh;
+  /* max-width: 500px; */
+}
+
+      /* Media query for mobile devices */
+      @media (max-width: 767px) {
+        .h4-responsive {
+            font-size: 0.9rem; /* Adjusted font size for headings on mobile */
+        }
+
+        .h3-responsive {
+            font-size: 0.8rem; /* Adjusted font size for headings on mobile */
+        }
+
+        .text-responsive {
+            font-size: 0.7rem; /* Adjusted font size for paragraphs on mobile */
+        }
+    }

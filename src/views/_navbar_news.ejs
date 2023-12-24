@@ -1,0 +1,39 @@
+<nav class="container-fluid d-flex flex-row align-items-center w-100  border p-2 bg-dark pl-3">
+
+    <div class="w-10 mr-auto border-light rounded-circle h-20 bg-danger">
+      <a href="#"> <img src="./public/img/job_logo.jpg" alt="" height="45px" class="rounded rounded-circle"></a>
+    </div>
+    <div class="w-80 h-100 mr-5 pl-5 pr-5 h-100 ">
+        <ul class="d-flex align-content-center w-100 h-100 text-light te list-unstyled  mb-0">
+            <li class="pr-md-5"><a class="nav-link text-white" href="/">Home</a></li>
+            <li class="pr-md-5"><a class="nav-link text-white" href="/">Jobs</a></li> <li class="pr-md-5"><a class="nav-link text-white" href="/">News</a></li> <li class="pr-md-5"><a class="nav-link text-white" href="/">About</a></li> <li class="pr-md-5"><a class="nav-link text-white" href="/">Contact</a></li>
+            <%if(locals.username){ %>
+         
+              <li class="nav-item text-white">
+                <a class="nav-link text-white" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item text-white">
+              <a class="nav-link text-white" href="/post_job">Post New Job</a>
+            </li>
+            <li class="nav-item text-white">
+              <a class="nav-link text-white" href="/post_job_by_id">View ALL Posted Job</a>
+            </li>
+
+            <li class="nav-item text-white">
+              <a class="nav-link text-white" href="/view-apply-jobs">View ALL Applied Job</a>
+            </li>
+          
+            <% }else{ %>
+
+              <li class="nav-item text-white">
+                <a class="nav-link text-white" href="/login">Login</a>
+            </li>
+            <% } %>
+
+        </ul>
+        
+    </div>
+    <div class="btns w-10 mr-3">
+        <a href="#"> <img src="./public/img/user_logo.jpg" alt="" height="45px" class="rounded rounded-circle"></a>
+    </div>
+</nav>

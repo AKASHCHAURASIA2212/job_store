@@ -1,0 +1,101 @@
+<div class="container d-flex justify-content-center align-iten-center border border-1 border-primary rounded p-4 m-4">
+    <form action="/post_job" method="post" class="w-100">
+
+        <div class="form-group">
+            <label for="job_title">Select Job Category</label>
+            <br>
+            <select class="form-select w-100 p-2 mt-2" aria-label="Default select example" id="job_title" name="job_title">
+                <option value="Tech" selected>Tech</option>
+                <option value="Non-Tech">Non-Tech</option>
+                <option value="HR">HR</option>
+            </select>
+        </div>
+      
+        <div class="form-group">
+            <label for="job_desc">Select Job Desingnation</label>
+            <br>
+            <select class="form-select w-100 p-2 mt-2" aria-label="Default select example" id="job_desc" name="job_desc">
+                <option value="SDE" selected>SDE</option>
+                <option value="Java_Developer">Java Developer</option>
+                <option value="Front_End_Devloper">Front-End Devloper</option>
+                <option value="Back_End_Devloper">Back-End Devloper</option>
+                <option value="Full_Stack_Devloper">Full-Stack Devloper</option>
+                <option value="System_Designer">System-Designer</option>
+                <option value="Mern_Developer">MERN Developer</option>
+                <option value="Mean_Developer">MEAN Developer</option>
+                <option value="Dev_ops">DevOps</option>
+                <option value="HR">HR</option>
+                <option value="HR">HR</option>
+              </select>
+        
+        </div>
+      
+      
+    
+    
+          <div class="form-group">
+            <label for="job_location">Enter Job Location</label>
+            <input type="text" class="form-control" id="job_location" name="job_location" value="Noida">
+          </div>
+    
+          <div class="form-group">
+            
+            <label for="company_name">Company Name</label>
+            <br>
+            <input type="text" class="form-control" value="ABC.LTD" name="company_name" id="company_name" >
+          </div>
+    
+    
+        <div class="form-group">
+            <label for="salary">Enter Package</label>
+            <input type="number" class="form-control" id="salary" name="salary" value="80000">
+        </div>
+    
+        <div class="form-group">
+            <label for="job_openings">Open Position</label>
+            <input type="number" class="form-control" id="job_openings" name="job_openings" value="4">
+          </div>
+    
+          <div class="form-group">
+            <label for="skills_required">Skills</label>
+            <br>
+            <select class="select w-100 p-2 mt-2" name="skills_required" multiple>
+                <option value="Html" selected>Html</option>
+                <option value="Css" selected>Css</option>
+                <option value="Js" selected>JS</option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="Jquery">Jquery</option>
+                <option value="NodeJS">Node-Js</option>
+                <option value="Express">Express</option>
+                <option value="Mongodb">MongoDB</option>
+                <option value="Java">Java</option>
+                <option value="Servlet">Servelet</option>
+                <option value="SpringBoot">SpringBoot</option>
+                <option value="MySql">MySql</option>
+              </select>
+        </div>
+      
+    
+        <div class="form-group">
+            <label for="date_entered" class="">Applied Date :</label>
+            <br>
+            <input type="date" id="date_entered" name="date_entered" id="datePicker" class="p-2 border border-dark rounded w-25" >    
+          </div>
+    
+    
+    
+     
+        <button type="submit" onclick="handleFormSubmit" class="btn btn-primary">Submit</button>
+        <br>
+    
+        
+    </form>
+    
+</div>
+<script>
+  
+document.getElementById('datePicker').value = new Date().toDateInputValue();
+
+
+
+</script>
